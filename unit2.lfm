@@ -1,67 +1,171 @@
 object Form2: TForm2
   Left = 605
-  Height = 260
+  Height = 252
   Top = 31
-  Width = 551
+  Width = 387
+  AlphaBlendValue = 225
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 260
-  ClientWidth = 551
+  ClientHeight = 252
+  ClientWidth = 387
   Position = poMainFormCenter
   LCLVersion = '4.6.0.0'
+  OnCreate = FormCreate
   OnShow = FormShow
-  object BitBtn1: TBitBtn
-    Left = 0
-    Height = 29
-    Top = 231
-    Width = 551
-    Align = alBottom
-    AutoSize = True
-    Caption = '&Ok'
-    TabOrder = 0
-    OnClick = BitBtn1Click
-  end
-  object StaticText1: TStaticText
-    Left = 96
-    Height = 231
+  object Panel1: TPanel
+    Left = 128
+    Height = 252
     Top = 0
-    Width = 455
+    Width = 259
     Align = alClient
-    Alignment = taCenter
-    BorderStyle = sbsSunken
-    Caption = #10#10#10'Memopad           2026'#10#10'By Crapklap'#10#10'Released Under GPL'#10'Built using Lazarus'
-    TabOrder = 1
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    BevelWidth = 5
+    BorderStyle = bsSingle
+    ClientHeight = 250
+    ClientWidth = 257
+    TabOrder = 0
+    OnClick = Panel1Click
+    OnPaint = Panel1Paint
+    object Label1: TLabel
+      Left = 248
+      Height = 247
+      Top = 512
+      Width = 189
+      Alignment = taCenter
+      Caption = 'Memopad'#10#10'---------------------'#10#10'A ''basic'' text editor'#10#10'---------------------'#10#10'By Crapklap'#10#10'---------------------'#10#10'Freeware'#10#10'---------------------'#10#10'Designed using Lazarus'#10#10'---------------------'#10#10'2026'#10#10'---------------------'#10#10'Version 0.3.1'
+      Font.Color = clWhite
+      ParentFont = False
+    end
   end
-  object Image1: TImage
+  object Panel2: TPanel
     Left = 0
-    Height = 231
+    Height = 252
     Top = 0
-    Width = 96
+    Width = 128
     Align = alLeft
-    Picture.Data = {
-      1754506F727461626C654E6574776F726B477261706869634602000089504E47
-      0D0A1A0A0000000D4948445200000040000000400806000000AA6971DE000000
-      097048597300000EC400000EC401952B0E1B000001F849444154789CED9B316E
-      E2401486BFB156CAB2058BE857912517D98A8E8622579B1BE40A39C21E81B45C
-      00A4484889562BAA8D91B64895972244320A61DF38369E78DE57016F7ECFF32F
-      E6B71163300CC330C2F0DE8BF75E62ADB74A75E2434D745D6F95184FF8A32664
-      2183BDF7E4792EE3F158A6D3A900F35D690ECC0FD41F76F58796EB8FC01FA09D
-      6F44599652148500B25EAFA58AF77EEF7D577520DF19700B7C6FD480C96422CB
-      E5726F6260AFB9AEEB95CF2F807F8D1A309BCD0E4E0EBC692092FABDF6DC9C66
-      D0703894ED76BB2F748E97B9DE39708775E7DC6FE0C7BBE20AAA1074EEAD4FC7
-      9A8BA0FE74545C4165C06030D01E2F16FE6A07AA0CD86C3677F57BE984EDFF87
-      BC10741FD047BE840A1CDCB4D14803FC12B80A15051B207019AA3911B5FA4A7E
-      09246F806540A8C032A067246F806540A8C032A067246F806540A8C032A06724
-      6F806540A8C032A067246F806540A8C032A067246F409D0C88F15FA212B83E55
-      069C876A4EC039354E1E6C099801761F102AB0FB809E91BC019601A102CB809E
-      91BC01DA2570F6FAE29364807AAFB06AA728508A48B31B905BC439778FF2378B
-      7609688D8A05F5D2560DCCF37C58BF974E28B50355066459C66AB5AADFCE0971
-      CEFD049ADDDB7BEC818958A0E60313A16B5B46A31159965114058BC522862BC2
-      0028806FC0573E5F5E1986D121CF168129F3B88A3F7E0000000049454E44AE42
-      6082
-    }
-    Proportional = True
-    Stretch = True
-    Transparent = True
+    ClientHeight = 252
+    ClientWidth = 128
+    TabOrder = 1
+    OnPaint = Panel2Paint
+    object Image1: TImage
+      Left = 2
+      Height = 72
+      Top = 16
+      Width = 124
+      Center = True
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869634602000089504E47
+        0D0A1A0A0000000D4948445200000040000000400806000000AA6971DE000000
+        097048597300000EC400000EC401952B0E1B000001F849444154789CED9B316E
+        E2401486BFB156CAB2058BE857912517D98A8E8622579B1BE40A39C21E81B45C
+        00A4484889562BAA8D91B64895972244320A61DF38369E78DE57016F7ECFF32F
+        E6B71163300CC330C2F0DE8BF75E62ADB74A75E2434D745D6F95184FF8A32664
+        2183BDF7E4792EE3F158A6D3A900F35D690ECC0FD41F76F58796EB8FC01FA09D
+        6F44599652148500B25EAFA58AF77EEF7D577520DF19700B7C6FD480C96422CB
+        E5726F6260AFB9AEEB95CF2F807F8D1A309BCD0E4E0EBC692092FABDF6DC9C66
+        D0703894ED76BB2F748E97B9DE39708775E7DC6FE0C7BBE20AAA1074EEAD4FC7
+        9A8BA0FE74545C4165C06030D01E2F16FE6A07AA0CD86C3677F57BE984EDFF87
+        BC10741FD047BE840A1CDCB4D14803FC12B80A15051B207019AA3911B5FA4A7E
+        09246F806540A8C032A067246F806540A8C032A067246F806540A8C032A06724
+        6F806540A8C032A067246F806540A8C032A067246F409D0C88F15FA212B83E55
+        069C876A4EC039354E1E6C099801761F102AB0FB809E91BC019601A102CB809E
+        91BC01DA2570F6FAE29364807AAFB06AA728508A48B31B905BC439778FF2378B
+        7609688D8A05F5D2560DCCF37C58BF974E28B50355066459C66AB5AADFCE0971
+        CEFD049ADDDB7BEC818958A0E60313A16B5B46A31159965114058BC522862BC2
+        0028806FC0573E5F5E1986D121CF168129F3B88A3F7E0000000049454E44AE42
+        6082
+      }
+      Proportional = True
+      Transparent = True
+    end
+    object DividerBevel1: TDividerBevel
+      Left = 1
+      Height = 19
+      Top = 202
+      Width = 126
+      Align = alBottom
+      BevelStyle = bsRaised
+      BevelWidth = 1
+      CaptionSpacing = 5
+      ParentFont = False
+      Style = gsButton
+    end
+    object BitBtn2: TBitBtn
+      Left = 1
+      Height = 30
+      Top = 172
+      Width = 126
+      Align = alBottom
+      Caption = 'Git Hub'
+      TabOrder = 0
+      OnClick = BitBtn2Click
+    end
+    object BitBtn1: TBitBtn
+      Left = 1
+      Height = 30
+      Top = 221
+      Width = 126
+      Align = alBottom
+      Default = True
+      DefaultCaption = True
+      GlyphShowMode = gsmNever
+      Kind = bkOK
+      Layout = blGlyphRight
+      ModalResult = 1
+      TabOrder = 1
+      OnClick = BitBtn1Click
+    end
+    object DividerBevel3: TDividerBevel
+      Left = 1
+      Height = 19
+      Top = 153
+      Width = 126
+      Align = alBottom
+      BevelStyle = bsRaised
+      BevelWidth = 1
+      CaptionSpacing = 5
+      Font.Style = [fsBold]
+      ParentFont = False
+      Style = gsButton
+    end
+    object AutoPanel1: TAutoPanel
+      Left = 1
+      Height = 40
+      Top = 113
+      Width = 126
+      Align = alBottom
+      BevelInner = bvRaised
+      BorderStyle = bsSingle
+      ClientHeight = 38
+      ClientWidth = 124
+      TabOrder = 2
+      object Label2: TLabel
+        Left = 2
+        Height = 34
+        Top = 2
+        Width = 120
+        Align = alClient
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Memopad'
+        Font.Height = 29
+        Layout = tlCenter
+        OptimalFill = True
+        ParentFont = False
+      end
+    end
+  end
+  object Timer1: TTimer
+    Interval = 30
+    OnTimer = Timer1Timer
+    Left = 204
+    Top = 103
+  end
+  object Timer2: TTimer
+    Interval = 1
+    OnTimer = Timer2Timer
+    Left = 272
+    Top = 102
   end
 end
